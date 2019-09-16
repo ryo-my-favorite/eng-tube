@@ -4,7 +4,10 @@
       <v-row>
         <v-col cols="8">
           <div class="wrap_video">
-            <iframe width="80%" height="500" src="https://www.youtube.com/embed/DPkVTaOeaF8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <youtube
+            :video-id="videoId"
+            ref="youtube"
+            ></youtube>
           </div>
         </v-col>
         <v-col cols="4">
@@ -13,8 +16,9 @@
               <v-list-item
               v-for="item in listItems"
               :key="item.id"
+              v-on:click="changeVideo(item.id)"
               >
-                {{item.title}}
+                <div>{{item.title}}</div>
               </v-list-item>
             </v-list>
           </div>
@@ -39,9 +43,14 @@ interface LinkItem {
 })
 export default class Home extends Vue {
   public listItems: LinkItem[] = [
-    {id: '1', title: 'Ambitious Card'},
-    {id: '2', title: 'Elevator Card'},
+    {id: 'Zgl5eqTiiE4', title: 'Ambitious Card'},
+    {id: 'juLBZBL2Pl0', title: 'Elevator Card'},
   ];
+  public videoId: string = 'Zgl5eqTiiE4';
+
+  public changeVideo(id: string) {
+    this.videoId = id;
+  }
 }
 </script>
 
