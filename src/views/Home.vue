@@ -6,6 +6,8 @@
           <div class="wrap_video">
             <youtube
             :video-id="videoId"
+            fitParent
+            resize
             ref="youtube"
             ></youtube>
           </div>
@@ -45,6 +47,9 @@ export default class Home extends Vue {
   public listItems: LinkItem[] = [
     {id: 'Zgl5eqTiiE4', title: 'Ambitious Card'},
     {id: 'juLBZBL2Pl0', title: 'Elevator Card'},
+    {id: 'k7nJk8L22CE', title: 'Triumph'},
+    {id: 'sm9OBPvUHvE', title: 'Oil & Water'},
+    {id: 'QJv44-Ghj_Y', title: '3 Card Monte'},
   ];
   public videoId: string = 'Zgl5eqTiiE4';
 
@@ -58,14 +63,34 @@ export default class Home extends Vue {
 .container_main{
   padding: 32px auto;
   width: 100%;
-  background-color: #eee;
+  background-color: #f3f3f3;
+}
+@media(max-width: 768px ){
+  .col-8{
+    max-width: 100% !important;
+  }
+  .col-4{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  iframe{
+    width: 100%;
+  }
+  .row{
+    flex-direction: column;
+  }
 }
 .wrap_video{
-  background-color: #fff;
-  padding: 16px 8px;
+  width:100%;
+}
+iframe{
+  width: 100%;
+  max-width: 650px;
 }
 .side-bar_right{
   background-color: #fff;
   height: 100%;
+  border: 1px solid #BDBDBD;
 }
 </style>

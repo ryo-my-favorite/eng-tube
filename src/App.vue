@@ -1,14 +1,13 @@
 <template>
   <v-app>
     <div id="app">
-      <v-app-bar color="deep-purple darken-2" dark>
+      <v-app-bar color="grey darken-4" dark>
         <v-toolbar-title>
           <router-link class="link white--text" to="/">
-            Super Magic Video
+            Be Magician
           </router-link>
         </v-toolbar-title>
         <div class="flex-grow-1"></div>
-        <router-link class="link white--text" to="/link">Link</router-link>
       </v-app-bar>
       <router-view/>
     </div>
@@ -28,6 +27,7 @@ export default Vue.extend({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #f3f3f3;
 }
 #nav {
   padding: 30px;
