@@ -1,14 +1,6 @@
 <template>
   <v-app>
     <div id="app">
-      <v-app-bar color="grey darken-4" dark>
-        <v-toolbar-title>
-          <router-link class="link white--text" to="/">
-            Be Magician
-          </router-link>
-        </v-toolbar-title>
-        <div class="flex-grow-1"></div>
-      </v-app-bar>
       <router-view/>
     </div>
   </v-app>
@@ -16,9 +8,15 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-export default Vue.extend({
+@Component({
+  components: {
 
-});
+  },
+})
+
+export default class extends Vue {
+
+}
 </script>
 <style>
 #app {
