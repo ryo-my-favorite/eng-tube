@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <app-header></app-header>
     <v-container class="container_main">
       <v-row>
         <v-col cols="8">
@@ -32,7 +33,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import AppHeader from '@/components/AppHeader.vue';
 
 interface LinkItem {
   id: string;
@@ -40,7 +41,7 @@ interface LinkItem {
 }
 @Component({
   components: {
-    HelloWorld,
+    AppHeader,
   },
 })
 export default class Home extends Vue {
