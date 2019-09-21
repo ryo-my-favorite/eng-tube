@@ -24,6 +24,6 @@ export default new Router({
       path: '/beginner',
       name: 'beginner',
       component: BeginnerPage,
-    }
+    },
   ],
 });

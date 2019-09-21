@@ -42,20 +42,20 @@ import AppHeader from '@/components/AppHeader.vue';
   },
 })
 
-export default class BeginnerPage extends Vue{
+export default class BeginnerPage extends Vue {
   public listItems: LinkItem[] = [
-    {id: 'Zgl5eqTiiE4', title: 'Ambitious Card'},
-    {id: 'juLBZBL2Pl0', title: 'Elevator Card'},
-    {id: 'k7nJk8L22CE', title: 'Triumph'},
-    {id: 'sm9OBPvUHvE', title: 'Oil & Water'},
-    {id: 'QJv44-Ghj_Y', title: '3 Card Monte'},
+    {id: 's3VRsYnibr4', title: 'Two Jacks'},
+    {id: '7DyzDAu48g4', title: '6 and 9'},
+    {id: '8wFgUa2yAUo', title: '3 Easy Card Magics'},
+    {id: 'ZrYP9m3MpAU', title: 'Point your Card'},
+    {id: 'qUkLaL8DV-s', title: 'Any Card at Any Number'},
   ];
-  public videoId: string = 'Zgl5eqTiiE4';
+  public videoId: string = 's3VRsYnibr4';
 
   public changeVideo(id: string) {
     this.videoId = id;
   }
-};
+}
 </script>
 
 <style scoped>
