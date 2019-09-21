@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Link from './views/Link.vue';
+import BeginnerPage from './views/BeginnerPage.vue';
 
 Vue.use(Router);
 
@@ -19,5 +20,10 @@ export default new Router({
       name: 'link',
       component: Link,
     },
+    {
+      path: '/beginner',
+      name: 'beginner',
+      component: BeginnerPage,
+    }
   ],
 });

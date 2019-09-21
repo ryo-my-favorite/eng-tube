@@ -17,7 +17,7 @@
                 v-for="item in menuListItems"
                 :key="item.title"
                 >
-                    <v-list-item-title class="" v-on:click="moveTo">{{ item.title }}</v-list-item-title>
+                    <v-list-item-title class="" v-on:click="moveTo( item.path )">{{ item.title }}</v-list-item-title>
                 </v-list-item>
             </v-list>
         </v-menu> 
@@ -31,22 +31,25 @@ enum ViewMode {
 }
 interface ListItem {
     title: string;
+    path: string;
 }
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class AppHeader extends Vue {
-    @Prop({ default: ViewMode.Classic})
-    public mode: ViewMode = ViewMode.Classic;
+    @Prop( { default: ViewMode.Classic } )
+    public headerMode: ViewMode;
 
     public menuListItems: ListItem[] = [
-        {title: 'Classic Mode'},
-        {title: 'Begginer Mode'},
+        {title: 'Classic Mode', path: '/'},
+        {title: 'Begginer Mode', path: '/beginner'},
     ];
     public getColor(): string {
-        return this.mode === ViewMode.Classic ? 'gray darken-4' : 'green darken-4';
+        console.log(this.headerMode);
+        return this.headerMode === ViewMode.Classic ? 'gray darken-4' : 'green darken-4';
     }
-    public moveTo() {
+    public moveTo(path: string) {
+        this.$router.push(path);
     }
 }
 </script>
